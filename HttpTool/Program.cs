@@ -16,7 +16,7 @@ namespace HttpTool
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmHttpTool());
+            Application.Run(new FrmHttpTool()); 
         }
     }
 }
