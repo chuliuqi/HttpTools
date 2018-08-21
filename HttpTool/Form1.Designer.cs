@@ -30,16 +30,17 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.txtURL = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbHttpType = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.Body = new System.Windows.Forms.Label();
-            this.txtContent = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtResonse = new System.Windows.Forms.TextBox();
             this.btnSender = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtContent = new System.Windows.Forms.TextBox();
+            this.Body = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.txtResonse = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblStatusCode = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -62,18 +63,18 @@
             this.txtURL.Size = new System.Drawing.Size(518, 21);
             this.txtURL.TabIndex = 1;
             // 
-            // comboBox1
+            // cmbHttpType
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbHttpType.FormattingEnabled = true;
+            this.cmbHttpType.Items.AddRange(new object[] {
             "HTTPGET",
             "HTTPPOST",
             "HTTPINPUT",
             "HTTPDELETE"});
-            this.comboBox1.Location = new System.Drawing.Point(614, 15);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 20);
-            this.comboBox1.TabIndex = 2;
+            this.cmbHttpType.Location = new System.Drawing.Point(614, 15);
+            this.cmbHttpType.Name = "cmbHttpType";
+            this.cmbHttpType.Size = new System.Drawing.Size(121, 20);
+            this.cmbHttpType.TabIndex = 2;
             // 
             // label2
             // 
@@ -88,69 +89,13 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.lblStatusCode);
             this.panel1.Controls.Add(this.btnSender);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(7, 7);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(736, 65);
             this.panel1.TabIndex = 3;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel2.Controls.Add(this.txtContent);
-            this.panel2.Controls.Add(this.Body);
-            this.panel2.Location = new System.Drawing.Point(7, 78);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(736, 174);
-            this.panel2.TabIndex = 4;
-            // 
-            // Body
-            // 
-            this.Body.AutoSize = true;
-            this.Body.Location = new System.Drawing.Point(7, 4);
-            this.Body.Name = "Body";
-            this.Body.Size = new System.Drawing.Size(41, 12);
-            this.Body.TabIndex = 0;
-            this.Body.Text = "Body：";
-            // 
-            // txtContent
-            // 
-            this.txtContent.Location = new System.Drawing.Point(9, 20);
-            this.txtContent.Multiline = true;
-            this.txtContent.Name = "txtContent";
-            this.txtContent.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtContent.Size = new System.Drawing.Size(719, 142);
-            this.txtContent.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel3.Controls.Add(this.txtResonse);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(7, 258);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(736, 161);
-            this.panel3.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 10);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 12);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Reponse：";
-            // 
-            // txtResonse
-            // 
-            this.txtResonse.Location = new System.Drawing.Point(7, 25);
-            this.txtResonse.Multiline = true;
-            this.txtResonse.Name = "txtResonse";
-            this.txtResonse.ReadOnly = true;
-            this.txtResonse.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtResonse.Size = new System.Drawing.Size(721, 126);
-            this.txtResonse.TabIndex = 1;
             // 
             // btnSender
             // 
@@ -162,6 +107,72 @@
             this.btnSender.UseVisualStyleBackColor = true;
             this.btnSender.Click += new System.EventHandler(this.btnSender_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Controls.Add(this.txtContent);
+            this.panel2.Controls.Add(this.Body);
+            this.panel2.Location = new System.Drawing.Point(7, 78);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(736, 174);
+            this.panel2.TabIndex = 4;
+            // 
+            // txtContent
+            // 
+            this.txtContent.Location = new System.Drawing.Point(9, 20);
+            this.txtContent.Multiline = true;
+            this.txtContent.Name = "txtContent";
+            this.txtContent.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtContent.Size = new System.Drawing.Size(719, 142);
+            this.txtContent.TabIndex = 1;
+            // 
+            // Body
+            // 
+            this.Body.AutoSize = true;
+            this.Body.Location = new System.Drawing.Point(7, 4);
+            this.Body.Name = "Body";
+            this.Body.Size = new System.Drawing.Size(41, 12);
+            this.Body.TabIndex = 0;
+            this.Body.Text = "Body：";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel3.Controls.Add(this.txtResonse);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Location = new System.Drawing.Point(7, 258);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(736, 161);
+            this.panel3.TabIndex = 5;
+            // 
+            // txtResonse
+            // 
+            this.txtResonse.Location = new System.Drawing.Point(7, 25);
+            this.txtResonse.Multiline = true;
+            this.txtResonse.Name = "txtResonse";
+            this.txtResonse.ReadOnly = true;
+            this.txtResonse.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtResonse.Size = new System.Drawing.Size(721, 126);
+            this.txtResonse.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(7, 10);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 12);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Reponse：";
+            // 
+            // lblStatusCode
+            // 
+            this.lblStatusCode.AutoSize = true;
+            this.lblStatusCode.Location = new System.Drawing.Point(110, 40);
+            this.lblStatusCode.Name = "lblStatusCode";
+            this.lblStatusCode.Size = new System.Drawing.Size(65, 12);
+            this.lblStatusCode.TabIndex = 2;
+            this.lblStatusCode.Text = "StatusCode";
+            // 
             // FrmHttpTool
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -169,7 +180,7 @@
             this.ClientSize = new System.Drawing.Size(747, 421);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbHttpType);
             this.Controls.Add(this.txtURL);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -191,7 +202,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtURL;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbHttpType;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
@@ -201,6 +212,7 @@
         private System.Windows.Forms.TextBox txtResonse;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnSender;
+        private System.Windows.Forms.Label lblStatusCode;
     }
 }
 
