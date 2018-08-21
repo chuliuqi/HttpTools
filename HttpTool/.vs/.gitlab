@@ -1,0 +1,13 @@
+{
+  "User": {
+    "Id": 187,
+    "Username": "liuqi.chu",
+    "Name": "储六奇",
+    "Email": "liuqi.chu@ikang.com",
+    "AvatarUrl": "http://cn.gravatar.com/avatar/0d27c90af4c0436b1147f9cdf90e8c30?s=80&d=identicon",
+    "PrivateToken": "f5858f8eaf4588e3e9361e4dfaac80e0d088cadc2bb6b5379e8984a3b76966d2",
+    "Host": "http://gitlab.it.ikang.com/",
+    "TwoFactorEnabled": false,
+    "ApiVersion": 3
+  }
+}

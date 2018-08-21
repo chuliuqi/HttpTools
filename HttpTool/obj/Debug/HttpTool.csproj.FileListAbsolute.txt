@@ -1,0 +1,13 @@
+c:\users\js\documents\visual studio 2017\Projects\HttpTool\HttpTool\bin\Debug\HttpTool.exe.config
+c:\users\js\documents\visual studio 2017\Projects\HttpTool\HttpTool\bin\Debug\HttpTool.exe
+c:\users\js\documents\visual studio 2017\Projects\HttpTool\HttpTool\bin\Debug\HttpTool.pdb
+c:\users\js\documents\visual studio 2017\Projects\HttpTool\HttpTool\obj\Debug\HttpTool.csprojAssemblyReference.cache
+c:\users\js\documents\visual studio 2017\Projects\HttpTool\HttpTool\obj\Debug\HttpTool.Properties.Resources.resources
+c:\users\js\documents\visual studio 2017\Projects\HttpTool\HttpTool\obj\Debug\HttpTool.csproj.GenerateResource.cache
+c:\users\js\documents\visual studio 2017\Projects\HttpTool\HttpTool\obj\Debug\HttpTool.csproj.CoreCompileInputs.cache
+c:\users\js\documents\visual studio 2017\Projects\HttpTool\HttpTool\obj\Debug\HttpTool.exe
+c:\users\js\documents\visual studio 2017\Projects\HttpTool\HttpTool\obj\Debug\HttpTool.pdb
+c:\users\js\documents\visual studio 2017\Projects\HttpTool\HttpTool\obj\Debug\HttpTool.FrmHttpTool.resources
+c:\users\js\documents\visual studio 2017\Projects\HttpTool\HttpTool\bin\Debug\Newtonsoft.Json.dll
+c:\users\js\documents\visual studio 2017\Projects\HttpTool\HttpTool\bin\Debug\Newtonsoft.Json.xml
+c:\users\js\documents\visual studio 2017\Projects\HttpTool\HttpTool\obj\Debug\HttpTool.csproj.CopyComplete
